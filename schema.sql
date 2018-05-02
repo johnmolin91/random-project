@@ -3,16 +3,50 @@ CREATE DATABASE nbaplayerstats;
 
 USE nbaplayerstats;
 
-CREATE TABLE players(
-  player_id INT AUTO_INCREMENT NOT NULL,
-  product_name VARCHAR(45) NOT NULL,
-  department_name VARCHAR(45) NOT NULL,
-  price DECIMAL(10,2) NOT NULL,
-  stock_quantity INT(10) NOT NULL,
-  primary key(item_id)
+CREATE TABLE playerspergame(
+  Rk INT UNIQUE NOT NULL,
+  Player VARCHAR(99) NOT NULL,
+  Pos VARCHAR(5) NOT NULL,
+  Age INT NOT NULL,
+  Tm VARCHAR(5) NOT NULL,
+  G INT NOT NULL,
+  GS INT NOT NULL,
+  MP DECIMAL(10,2) NOT NULL,
+  FG DECIMAL(10,2) NOT NULL,
+  FGA DECIMAL(10,2) NOT NULL,
+  FGP DECIMAL(10,3) NOT NULL,
+  3P DECIMAL (10,2) NOT NULL,
+  3PA DECIMAL(10,2) NOT NULL,
+  3PP DECIMAL(10,3) NOT NULL,
+  2P DECIMAL (10,2) NOT NULL,
+  2PA DECIMAL (10,2) NOT NULL,
+  2PP DECIMAL (10,3) NOT NULL,
+  eFG DECIMAL (10,3) NOT NULL,
+  FT DECIMAL (10,2) NOT NULL,
+  FTA DECIMAL (10,2) NOT NULL,
+  FTP DECIMAL (10,3) NOT NULL,
+  ORB DECIMAL (10,2) NOT NULL,
+  DRB DECIMAL (10,2) NOT NULL,
+  TRB DECIMAL (10,2) NOT NULL,
+  AST DECIMAL (10,2) NOT NULL,
+  STL DECIMAL (10,2) NOT NULL,
+  BLK DECIMAL (10,2) NOT NULL,
+  TOV DECIMAL (10,2) NOT NULL,
+  PF DECIMAL (10,2) NOT NULL,
+  PPG DECIMAL (10,2) NOT NULL,
+  primary key (Rk)
 );
 
-SELECT * FROM players;
+SELECT * FROM playerspergame;
 
-INSERT INTO products (product_name, department_name, price, stock_quantity)
-VALUES
+-- CREATE TABLE players(
+--   player_id INT AUTO_INCREMENT NOT NULL,
+--   product_name VARCHAR(45) NOT NULL,
+--   department_name VARCHAR(45) NOT NULL,
+--   price DECIMAL(10,2) NOT NULL,
+--   stock_quantity INT(10) NOT NULL,
+--   primary key(item_id)
+-- );
+
+-- INSERT INTO products (product_name, department_name, price, stock_quantity)
+-- VALUES

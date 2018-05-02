@@ -32,8 +32,5 @@ function loadProducts() {
 
     // Draw the table in the terminal using the response
     console.table(res);
-
-    // Then prompt the customer for their choice of product, pass all the products to promptCustomerForItem
-    promptCustomerForItem(res);
   });
 }
