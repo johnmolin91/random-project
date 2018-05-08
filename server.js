@@ -13,7 +13,7 @@ var connection = mysql.createConnection({
 
   // Your password
   password: "root",
-  database: "bamazon"
+  database: "nbaplayerstats"
 });
 
 // Creates the connection with the server and loads the product data upon a successful connection
@@ -21,13 +21,13 @@ connection.connect(function(err) {
   if (err) {
     console.error("error connecting: " + err.stack);
   }
-  loadProducts();
+  loadPlayers();
 });
 
 // Function to load the products table from the database and print results to the console
-function loadProducts() {
+function loadPlayers() {
   // Selects all of the data from the MySQL products table
-  connection.query("SELECT * FROM products", function(err, res) {
+  connection.query("SELECT Player, PPG + .5*3P + 1.25*TRB AS RAW FROM playerspergame LIMIT 10", function(err, res) {
     if (err) throw err;
 
     // Draw the table in the terminal using the response

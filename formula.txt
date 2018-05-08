@@ -1,0 +1,36 @@
+Raw score formula:
+
+PPG + (1/2)3P + (1.25)Reb + (1.5)Assist + (2)Steal + (2)Block - (1/2)Turnovers + (x)1.5 + y(3) = Raw score
+
+x = % likelihood of double double
+y = % likelihood of triple double
+
+x = (.04)RPG + (.04)APG + ((.02)(RPG + APG)) ^ 2
+y = (.005)(RPG + APG)
+
+Westbrook = .102 (.313)
+james = .088 (.220)
+simmons = .081 (.148)
+jokic = .084 (.133)
+
+durant = .061 (.029)
+
+
+
+DBl dbl numbers:
+
+towns = .492 .096 + .086 = .674 (.829)
+drummond = .64 + .12 + .144 = .884 (.795)
+westbrook = .404 + .412 + .166 = .982 (.738)
+howard = .5 + .052 + .076 = .628 (.654)
+james = .344 + .364 + .125 = .833 (.634)
+
+xv2 = (.03)RPG + (.03)APG + ((.03)(RPG + APG)) ^ 2
+
+towns = .369 + .072 + .194 = .635
+drummond = .48 + .09 + .325 = .895
+westbrook = .303 + .309 + .375 = .987
+howard = .375 + .039 + .171 = .585
+james = .258 + .273 + .282 = .813
+
+y = (.01)(RPG + APG)
