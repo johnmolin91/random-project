@@ -27,7 +27,7 @@ connection.connect(function(err) {
 // Function to load the products table from the database and print results to the console
 function loadPlayers() {
   // Selects all of the data from the MySQL products table
-  connection.query("SELECT Player, PPG + .5*3P + 1.25*TRB AS RAW FROM playerspergame LIMIT 10", function(err, res) {
+  connection.query("SELECT Player, PPG + .5*3P + 1.25*TRB + 1.5*AST + 2*STL + 2*BLK - .5*TOV + 1.5*(.04*TRB + .04*AST + (.0004)*(TRB+AST)*(TRB+AST)) + (TRB+AST)/66 AS raw FROM playerspergame ORDER BY raw DESC LIMIT 20 ", function(err, res) {
     if (err) throw err;
 
     // Draw the table in the terminal using the response

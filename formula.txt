@@ -2,6 +2,8 @@ Raw score formula:
 
 PPG + (1/2)3P + (1.25)Reb + (1.5)Assist + (2)Steal + (2)Block - (1/2)Turnovers + (x)1.5 + y(3) = Raw score
 
+25.4 + .5*1.2 + 1.25(10.1) + (1.5)(10.3) + 2(1.8) + 2(0.3) - .5*(4.8) + 1.5(.982) + 3(.102) = 
+
 x = % likelihood of double double
 y = % likelihood of triple double
 
