@@ -1,0 +1,47 @@
+notes:
+-minutes played / g needs to be factored in ((mp/g)/48)
+PER - player efficiency rating
+TSP - true shooting percentage
+3PAR - 3pa/FGA
+FTR - FTA/FGA
+ORBP - offensive rebound percentage
+DRBP - defensive rebound percentage
+TRBP - total rebound percentage
+ASTP - Assist percentage
+STLP - Steal percentage
+BLKP - block percentage
+TOVP - turnover percentage
+usgp - usage percentage
+OWS - offensive winshares
+DWS - defensive winshares
+WS - Winshares
+WS48 - winshares/48
+OBPM - offensive box plus minus
+DBPM - defensive box plus minus
+BPM - box plus minus
+VORP - value over replacement player
+
+STAT - Importance (out of 10)
+MP/g - 10
+PER - 5
+TSP -7
+3PAR - 5
+FTR - 5
+ORBP - 0
+DRBP - 0
+TRBP - 7
+ASTP - 7
+STLP - 6
+BLKP - 6
+TOVP - 6
+USGP - 9
+OWS - 9
+DWS - 7
+WS - 9
+WS48 - 10
+OBPM - 9
+DBPM - 7
+BPM - 10
+VORP - 8
+
+Advanced Score = (mp/g)(USGP)(PER/4 + TSP/3 + 3PAR/4 + FTR/4 + TRBP/3 + ASTP/3 + STLP/4 + BLKP/4 - TOVP/4) + 100*(OWS + DWS/2 + WS + WS48) + 20*(OBPM + DBPM/2 + BPM + VORP)

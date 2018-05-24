@@ -27,7 +27,7 @@ connection.connect(function(err) {
 // Function to load the products table from the database and print results to the console
 function loadPlayers() {
   // Selects all of the data from the MySQL products table
-  connection.query("SELECT Player, PER AS rawAdv FROM playersadvanced WHERE Tm ='BOS' OR Tm='CLE' ORDER BY rawAdv DESC LIMIT 200", function(err, res) {
+  connection.query("SELECT Player, (MP/G)*(USGP)*(PER/4 + TSP/3 + 3PAR/4 + FTR/4 + TRBP/3 + ASTP/3 + STLP/4 + BLKP/4 - TOVP/4) + 100*(OWS + DWS/2 + WS + WS48) + 20*(OBPM + DBPM/2 + BPM + VORP) AS rawAdv FROM playersadvanced WHERE Tm ='HOU' OR Tm='GSW' ORDER BY rawAdv DESC LIMIT 200", function(err, res) {
     if (err) throw err;
 
     // Draw the table in the terminal using the response
