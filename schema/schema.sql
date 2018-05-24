@@ -1,7 +1,7 @@
-DROP DATABASE IF EXISTS nbaplayerstats;
-CREATE DATABASE nbaplayerstats;
+DROP DATABASE IF EXISTS nbaplayerstats18playoffs;
+CREATE DATABASE nbaplayerstats18playoffs;
 
-USE nbaplayerstats;
+USE nbaplayerstats18playoffs;
 
 CREATE TABLE playerspergame(
   Rk INT UNIQUE NOT NULL,
