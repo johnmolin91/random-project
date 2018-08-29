@@ -5,7 +5,7 @@ const pool = mysql.createPool({
   host: '127.0.0.1',
   user: 'root',
   password: 'root',
-  database: 'nbaplayerstats18playoffsadv',
+  database: 'nbaplayerstats18adv',
   charset: 'utf8'
 });
 
@@ -25,9 +25,9 @@ function setResHtml(sql, cb){
 
       //create html table with data from res.
       for(var i=0; i<res.length; i++){
-        table +='<tr><td>'+ (i+1) +'</td><td>'+ res[i].Player +'</td><td>'+ res[i].PER +'</td></tr>';
+        table +='<tr><td>'+ (i+1) +'</td><td>'+ res[i].Player +'</td><td>'+ res[i].rawScore +'</td></tr>';
       }
-      table ='<table border="1"><tr><th>Nr.</th><th>Player</th><th>PER</th></tr>'+ table +'</table>';
+      table ='<table border="1"><tr><th>Nr.</th><th>Player</th><th>Raw Score</th></tr>'+ table +'</table>';
 
       con.release(); //Done with mysql connection
 
@@ -36,7 +36,7 @@ function setResHtml(sql, cb){
   });
 }
 
-let sql ='SELECT Player, PER FROM playersadvanced ORDER BY PER DESC LIMIT 20';
+let sql ='SELECT Player, (MP/G)*(USGP)*(PER/4 + TSP/3 + 3PAR/4 + FTR/4 + TRBP/3 + ASTP/3 + STLP/4 + BLKP/4 - TOVP/4) + 100*(OWS + DWS/2 + WS + WS48) + 20*(OBPM + DBPM/2 + BPM + VORP) AS rawScore FROM playersadvanced ORDER BY rawScore DESC LIMIT 20';
 
 //create the server for browser access
 const server = http.createServer((req, res)=>{
