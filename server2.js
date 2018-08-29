@@ -34,3 +34,4 @@ function loadPlayers() {
     console.table(res);
   });
 }
+
